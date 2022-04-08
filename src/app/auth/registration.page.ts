@@ -9,71 +9,26 @@ import { AuthService } from './auth.service';
       <form #form="ngForm" (ngSubmit)="onsubmit(form)">
         <div class="form-group">
           <label for="name" class="text-white fs-4">Nome</label>
-          <input
-            name="name"
-            required
-            ngModel
-            class="form-control"
-            id="name"
-            type="text"
-          />
+          <input name="name" required ngModel class="form-control" id="name" type="text"/>
         </div>
         <div class="form-group">
           <label for="surname" class="text-white fs-4">Cognome</label>
-          <input
-            name="surname"
-            required
-            ngModel
-            class="form-control"
-            id="surname"
-            type="text"
-          />
+          <input name="surname" required ngModel class="form-control" id="surname" type="text"/>
         </div>
         <div class="form-group">
           <label for="email" class="text-white fs-4">Email</label>
-          <input
-            name="email"
-            class="form-control"
-            required
-            ngModel
-            id="email"
-            type="email"
-          />
+          <input name="email" class="form-control" required ngModel id="email" type="email"/>
         </div>
         <div class="form-group">
           <label for="pass" class="text-white fs-4">Password</label>
-          <input
-            name="password"
-            class="form-control"
-            required
-            ngModel
-            id="pass"
-            type="password"
-          />
+          <input name="password" class="form-control" required ngModel id="pass" type="password"/>
         </div>
         <div class="d-flex align-items-center">
-          <button
-            type="submit"
-            [disabled]="form.invalid"
-            class="btn btn-success mt-4 fs-5"
-          >
-            Registrati
-            <span
-              *ngIf="isLoading"
-              class="spinner-border spinner-border-sm"
-              role="status"
-            ></span>
+          <button type="submit" [disabled]="form.invalid" class="btn btn-success mt-4 fs-5">Registrati
+            <span *ngIf="isLoading" class="spinner-border spinner-border-sm" role="status"></span>
           </button>
           <div class="mt-3">
-            <span class="text-white fs-5 mx-3"
-              >O se sei già registrato
-              <a
-                [routerLink]="['/login']"
-                routerLinkActive="active"
-                class="log"
-                >Login</a
-              ></span
-            >
+            <span class="text-white fs-5 mx-3">O se sei già registrato <a [routerLink]="['/login']" routerLinkActive="active" class="log">Login</a></span>
           </div>
         </div>
       </form>
@@ -90,6 +45,7 @@ import { AuthService } from './auth.service';
         padding: 40px;
         background-color: gray;
         border-radius: 10px;
+        box-shadow: 2px 2px 25px 0px rgba(255,255,255,0.51);
       }
       input {
         font-size: 20px;

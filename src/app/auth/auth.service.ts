@@ -45,6 +45,7 @@ export class AuthService {
       catchError(this.trovaErr)
     );
   }
+
   restore() {
     const user = localStorage.getItem('user');
     if (!user) {

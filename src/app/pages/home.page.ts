@@ -8,18 +8,8 @@ import { Component, OnInit } from '@angular/core';
         <div class="card-body">
           <h1 class="card-title fw-bold">Flixnet</h1>
           <p class="card-text fs-4">Accedi o registrati, è gratis 😎</p>
-          <a
-            class="btn btn-success mt-3 w-15"
-            [routerLink]="['/login']"
-            routerLinkActive="active"
-            >Accedi</a
-          >
-          <a
-            class="btn btn-success mt-3 w-15"
-            [routerLink]="['/registration']"
-            routerLinkActive="active"
-            >Registrati</a
-          >
+          <a class="btn btn-success mt-3 w-15" [routerLink]="['/login']" routerLinkActive="active">Accedi</a>
+          <a class="btn btn-success mt-3 w-15" [routerLink]="['/registration']" routerLinkActive="active">Registrati</a>
         </div>
       </div>
     </div>
@@ -43,6 +33,7 @@ import { Component, OnInit } from '@angular/core';
         left: 3vw;
         background-color: gray;
         border: 2px solid red;
+        box-shadow: 2px 2px 25px 0px rgba(255,255,255,0.51);
       }
       .btn {
         margin-right: 25px;

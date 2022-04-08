@@ -9,42 +9,16 @@ import { AuthService } from './auth.service';
       <form #form="ngForm" (ngSubmit)="accedi(form)">
         <div class="form-group">
           <label for="email" class="text-white fs-4">Email</label>
-          <input
-            name="email"
-            class="form-control"
-            required
-            ngModel
-            id="email"
-            type="email"
-          />
+          <input name="email" class="form-control" required ngModel id="email" type="email"/>
         </div>
         <div class="form-group">
           <label for="pass" class="text-white fs-4">Password</label>
-          <input
-            name="password"
-            required
-            class="form-control"
-            ngModel
-            id="pass"
-            type="password"
-          />
+          <input name="password" required class="form-control" ngModel id="pass" type="password"/>
         </div>
         <div class="d-flex align-items-center">
-          <button
-            type="submit"
-            [disabled]="form.invalid"
-            class="btn btn-success mt-4 fs-5"
-          >
-            Accedi
-          </button>
+          <button type="submit" [disabled]="form.invalid" class="btn btn-success mt-4 fs-5">Accedi</button>
           <div class="mt-3">
-            <span class="text-white fs-5 mx-3"
-              >Non sei ancora registrato?
-              <a [routerLink]="['/registration']" routerLinkActive="active"
-              class="reg"
-                >Registrati</a
-              ></span
-            >
+            <span class="text-white fs-5 mx-3">Non sei ancora registrato?<a [routerLink]="['/registration']" routerLinkActive="active" class="reg">Registrati</a></span>
           </div>
         </div>
       </form>
@@ -61,6 +35,7 @@ import { AuthService } from './auth.service';
         padding: 40px;
         border-radius: 10px;
         background-color: gray;
+        box-shadow: 2px 2px 25px 0px rgba(255,255,255,0.51);
       }
       input {
         font-size: 20px;
@@ -79,7 +54,6 @@ export class LoginPage implements OnInit {
 
   async accedi(form: NgForm) {
     this.isLoading = true;
-    console.log(form.value);
     try {
       await this.authSrv.login(form.value).toPromise();
       this.isLoading = false;
@@ -88,7 +62,6 @@ export class LoginPage implements OnInit {
       this.isLoading = false;
       form.reset();
       alert(error);
-      console.error(error);
     }
   }
 }

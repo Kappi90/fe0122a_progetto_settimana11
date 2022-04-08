@@ -20,7 +20,7 @@ import { AuthData, AuthService } from './auth/auth.service';
               <i class="bi bi-key mx-2"></i>Login</a>
           </li>
           <li *ngIf="!user" class="nav-item">
-            <a class="nav-link" [routerLink]="['/registration']" routerLinkActive="active">
+            <a class="nav-link reg" [routerLink]="['/registration']" routerLinkActive="active">
               <i class="bi bi-person-plus mx-2"></i> Registrati</a>
           </li>
           <li *ngIf="user" class="nav-item">
@@ -49,6 +49,9 @@ import { AuthData, AuthService } from './auth/auth.service';
       * {
         margin: 0;
         padding: 0;
+      }
+      .reg{
+        margin-bottom:20px;
       }
       .btn{
         padding:5px;

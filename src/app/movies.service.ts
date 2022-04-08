@@ -14,7 +14,9 @@ export class MoviesService {
   preferiti: Movie[] = [];
   mUrl = 'http://localhost:4200/api/movies-popular';
   fUrl = 'http://localhost:4200/api/favorites';
+
   constructor(private http: HttpClient, private authSrv: AuthService) {}
+
   getMovies() {
     return this.http.get<Movie[]>(this.mUrl);
   }
